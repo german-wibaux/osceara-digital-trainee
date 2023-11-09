@@ -38,6 +38,13 @@ import {
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 
+import { BoolActivePipe } from "src/app/service/boolActive/bool-active.pipe";
+
+// import { CheckXPipe } from './service/boolActive/check-x.pipe';
+
+// import { TableTestComponent } from './views/base/table-test/table-test.component';
+
+
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
@@ -45,7 +52,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS],
+  declarations: [AppComponent, ...APP_CONTAINERS, BoolActivePipe],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -72,7 +79,7 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
-    NgScrollbarModule
+    NgScrollbarModule,
   ],
   providers: [
     {
