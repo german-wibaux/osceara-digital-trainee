@@ -53,7 +53,7 @@ export class TableTestComponent {
     vencimientoPMI: null
   },{
     id: 1,
-    activo: true,
+    activo: false,
     cuil: 11445002332,
     cuilTitular: 11332201232,
     nroAfiliado: null,
@@ -95,7 +95,7 @@ export class TableTestComponent {
     vencimientoPMI: null
   },{
     id: 1,
-    activo: true,
+    activo: false,
     cuil: 11445002332,
     cuilTitular: 11332201232,
     nroAfiliado: null,

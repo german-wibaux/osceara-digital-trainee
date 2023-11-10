@@ -1,12 +1,13 @@
 <c-row ngPreserveWhitespaces>
-  <c-col xs="12">
-    <app-docs-callout href="components/table" name="Table"></app-docs-callout>
-  </c-col>
+  <div class="gap-4 col-12 mb-3">
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR CSV</button>
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-cloud-download"></svg>EXPORTAR CSV 2</button>
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-cloud-download"></svg>EXPORTAR GECROS</button>
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR BYMOVI</button>
+  </div>
   <c-col xs="12">
     <c-card class="mb-4">
-      <c-card-header>
-        <strong>Angular Table</strong> <small>Basic example</small>
-      </c-card-header>
+
           <table [striped]="true" [hover]="true" [small]="true" cTable style="font-size: 10.5px;">
             <thead>
             <tr>
@@ -35,9 +36,10 @@
             <tbody>
             <tr *ngFor="let income of backendIncome">
               <th scope="row">{{income.id}}</th>
-              <td>{{income.activo}}</td>
-              <td>{{income.cuil}}</td>
-              <td>{{income.cuilTitular}}</td>
+              <td class="active-table-true" *ngIf="income.activo">&#10003;</td>
+              <td class="active-table-false" *ngIf="!income.activo">X</td>
+              <td class="cuil-table">{{income.cuil}}</td>
+              <td class="cuil-table">{{income.cuilTitular}}</td>
               <td>{{income.nroAfiliado}}</td>
               <td>{{income.nombre}}</td>
               <td>{{income.gerenciador}}</td>
@@ -93,7 +95,8 @@
         <tbody>
           <tr *ngFor="let income of backendIncome">
             <th scope="row">{{income.id}}</th>
-            <td>{{income.activo | boolActive}}</td>
+            <td>{{income.activo}}</td>
+            <!-- <td>{{income.activo | boolActive}}</td> -->
             <td>{{income.cuil}}</td>
             <td>{{income.cuilTitular}}</td>
             <td>{{income.nroAfiliado}}</td>
