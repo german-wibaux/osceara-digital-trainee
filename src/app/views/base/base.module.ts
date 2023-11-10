@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BoolActivePipe } from "src/app/service/boolActive/bool-active.pipe";
 
 // CoreUI Modules
 import {
@@ -102,6 +103,7 @@ import { TableTestComponent } from './table-test/table-test.component';
     TabsComponent,
     PlaceholdersComponent,
     TableTestComponent,
+    BoolActivePipe
   ],
 })
 export class BaseModule {}
