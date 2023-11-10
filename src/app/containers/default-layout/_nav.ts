@@ -39,6 +39,10 @@ export const navItems: INavData[] = [
         url: '/base/accordion'
       },
       {
+        name: 'TableTest',
+        url: '/base/tabletest'
+      },
+      {
         name: 'Breadcrumbs',
         url: '/base/breadcrumbs'
       },

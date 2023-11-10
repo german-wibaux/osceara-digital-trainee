@@ -16,6 +16,7 @@ import { TablesComponent } from './tables/tables.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { PlaceholdersComponent } from './placeholders/placeholders.component';
+import { TableTestComponent } from './table-test/table-test.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,13 @@ const routes: Routes = [
         component: AccordionsComponent,
         data: {
           title: 'Accordion',
+        },
+      },
+      {
+        path: 'tabletest',
+        component: TableTestComponent,
+        data: {
+          title: 'tabletest',
         },
       },
       {
