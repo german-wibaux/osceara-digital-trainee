@@ -31,7 +31,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Padrón',
-    url: '/base/Padron',
+    url: '/padron',
     iconComponent: { name: 'cil-star' },
     children: [
       {
@@ -40,19 +40,19 @@ export const navItems: INavData[] = [
       },
       {
         name: 'Movimientos de Afiliados',
-        url: '/Padron/movimientosafiliados'
+        url: '/padron/movimientoafiliados'
       },
       {
         name: 'Cambios de Gerenciador',
-        url: '/Padron/cambiosgerenciador'
+        url: '/padron/cambiosgerenciador'
       },
       {
         name: 'Analisis Afiliado',
-        url: '/Padron/analisisafiliado'
+        url: '/padron/analisisafiliado'
       },
       {
         name: 'Documentación Respaldatoria',
-        url: '/Padron/documentacionrespaldatoria'
+        url: '/padron/documentacionrespaldatoria'
       }
     ]
   },
