@@ -219,6 +219,15 @@ export const navItems: INavData[] = [
     }
   },
   {
+    name: 'OSCEARA',
+    title: true
+  },
+  {
+    name: 'Padrón',
+    url: '/base/tabletest',
+    iconComponent: { name: 'cil-star' }
+  },
+  {
     title: true,
     name: 'Extras'
   },
