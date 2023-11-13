@@ -30,6 +30,33 @@ export const navItems: INavData[] = [
     title: true
   },
   {
+    name: 'Padrón',
+    url: '/base/Padron',
+    iconComponent: { name: 'cil-star' },
+    children: [
+      {
+        name: 'Afiliados Empadronados',
+        url: '/base/tabletest'
+      },
+      {
+        name: 'Movimientos de Afiliados',
+        url: '/Padron/movimientosafiliados'
+      },
+      {
+        name: 'Cambios de Gerenciador',
+        url: '/Padron/cambiosgerenciador'
+      },
+      {
+        name: 'Analisis Afiliado',
+        url: '/Padron/analisisafiliado'
+      },
+      {
+        name: 'Documentación Respaldatoria',
+        url: '/Padron/documentacionrespaldatoria'
+      }
+    ]
+  },
+  {
     name: 'Base',
     url: '/base',
     iconComponent: { name: 'cil-puzzle' },
@@ -222,11 +249,7 @@ export const navItems: INavData[] = [
     name: 'OSCEARA',
     title: true
   },
-  {
-    name: 'Padrón',
-    url: '/base/tabletest',
-    iconComponent: { name: 'cil-star' }
-  },
+
   {
     title: true,
     name: 'Extras'
