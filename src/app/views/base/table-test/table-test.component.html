@@ -95,9 +95,9 @@
         <tbody>
           <tr *ngFor="let income of backendIncome">
             <th scope="row">{{income.id}}</th>
-            <td>{{income.activo | boolActive }}</td>
-            <td>{{income.cuil}}</td>
-            <td>{{income.cuilTitular}}</td>
+            <td [ngClass]="{'active-table-true': income.activo, 'active-table-false': !income.activo}">{{income.activo | boolActive }}</td>
+            <td class="cuil-table">{{income.cuil}}</td>
+            <td class="cuil-table">{{income.cuilTitular}}</td>
             <td>{{income.nroAfiliado}}</td>
             <td>{{income.nombre}}</td>
             <td>{{income.gerenciador}}</td>

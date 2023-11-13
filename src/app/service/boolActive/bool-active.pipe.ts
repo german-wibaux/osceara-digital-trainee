@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class BoolActivePipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): any {
-    return value ? "&#10003;" : "X";
+    return value ? "✓" : "X";
   }
 
 }

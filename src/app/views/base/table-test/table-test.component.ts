@@ -115,4 +115,9 @@ export class TableTestComponent {
     cuilAnterior: null,
     vencimientoPMI: null
   },]
+
+  exportCSV(){
+    
+  }
+
 }
