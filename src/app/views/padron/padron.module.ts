@@ -34,11 +34,13 @@ import { PadronRoutingModule } from './padron-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IconModule } from '@coreui/icons-angular';
 import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
+import { DocumentacionRespaldatoriaComponent } from './documentacion-respaldatoria/documentacion-respaldatoria.component';
 
 @NgModule({
   declarations: [
     MovimientoAfiliadosComponent,
-    CambiosGerenciadorComponent
+    CambiosGerenciadorComponent,
+    DocumentacionRespaldatoriaComponent
   ],
   imports: [
     PadronRoutingModule,

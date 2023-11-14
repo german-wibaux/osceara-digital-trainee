@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
+import { DocumentacionRespaldatoriaComponent } from './documentacion-respaldatoria/documentacion-respaldatoria.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,13 @@ const routes: Routes = [
         component: CambiosGerenciadorComponent,
         data: {
           title: 'Cambios de Gerenciador',
+        },
+      },
+      {
+        path: 'documentacionrespaldatoria',
+        component: DocumentacionRespaldatoriaComponent,
+        data: {
+          title: 'Documentacion Respaldatoria',
         },
       },
     ],
