@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
-  title = 'OSCEARA CoreUI Free Angular Admin Template';
+  title = 'CoreUI Free Angular Admin Template';
 
   constructor(
     private router: Router,
