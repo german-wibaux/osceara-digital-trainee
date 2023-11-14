@@ -2,6 +2,7 @@ import { MovimientoAfiliadosComponent } from './movimiento-afiliados/movimiento-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,13 @@ const routes: Routes = [
         component: MovimientoAfiliadosComponent,
         data: {
           title: 'Movimiento de Afiliados',
+        },
+      },
+      {
+        path: 'cambiosgerenciador',
+        component: CambiosGerenciadorComponent,
+        data: {
+          title: 'Cambios de Gerenciador',
         },
       },
     ],

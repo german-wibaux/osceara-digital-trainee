@@ -1,1 +1,160 @@
-<p>cambios-gerenciador works!</p>
+
+<c-container class="px-3 rounded-3" >
+  <div class="gap-4 col-12 mb-3">
+    <button cButton color="primary" class="me-2"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR CSV</button>
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR BYMOVI</button>
+    <!-- <button cButton color="primary"><svg cIcon class="me-2" name="cil-cloud-download"></svg>EXPORTAR CSV 2</button>
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-cloud-download"></svg>EXPORTAR GECROS</button>
+    <button cButton color="primary"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR BYMOVI</button> -->
+  </div>
+</c-container>
+
+<c-container class="px-2 py-3 filter-container rounded-3" >
+      <form [gutter]="3" cForm cRow autocomplete="off">
+        <c-col xs="auto">
+          <label cLabel class="visually-hidden" for="ID">
+            ID
+          </label>
+          <input cFormControl id="ID" type="text" />
+        </c-col>
+        <c-col xs="auto">
+          <label cLabel class="visually-hidden" for="CUILtitular">
+            CUIL titular
+          </label>
+          <input cFormControl id="CUILtitular" type="text" />
+        </c-col>
+        <c-col xs="auto">
+          <label cLabel class="visually-hidden" for="inputDate">
+            fechEjecutado
+          </label>
+          <input cFormControl id="fechEjecutado" placeholder="date" type="date" />
+        </c-col>
+        <c-col xs="auto">
+          <label cLabel class="visually-hidden" for="ejecutado">
+            Type
+          </label>
+          <select cFormControl aria-label="ejecutado" cSelect>
+            <option>Gerenciador Anterior</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </c-col>
+        <c-col xs="auto">
+          <label cLabel class="visually-hidden" for="ejecutado">
+            Type
+          </label>
+          <select cFormControl aria-label="ejecutado" cSelect>
+            <option>Gerenciador Destino</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </c-col>
+      </form>
+
+      <c-row class="mt-3" >
+        <c-col xs="auto">
+          <button cButton type="submit">
+            Buscar egresos
+          </button>
+        </c-col>
+        <c-col xs="auto">
+          <button cButton type="submit">
+            Borrar filtros
+          </button>
+        </c-col>
+      </c-row>
+    </c-container>
+<c-row ngPreserveWhitespaces>
+
+  <c-col xs="12">
+    <c-card class="mb-4">
+
+          <table [striped]="true" [hover]="true" [small]="true" cTable style="font-size: 12.5px;">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <td>CUIL Titular</td>
+              <td>Gerenciador/Plan Anterior</td>
+              <td>Gerenciador/Plan Nuevo</td>
+              <td>Motivo</td>
+              <td>Creado</td>
+              <td>Fecha</td>
+              <td>Creado x</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let income of backendIncome">
+              <th scope="row">{{income.id}}</th>
+              <td class="cuil-table">{{income.cuilTitular}}</td>
+              <td>{{income.gerenciadorPlanAnterior}}</td>
+              <td>{{income.gerenciadorPlanNuevo}}</td>
+              <td>{{income.motivo}}</td>
+              <td>{{income.creado | date : 'short'}}</td>
+              <td>{{income.fecha | date : 'short'}}</td>
+              <td>{{income.creadoX}}</td>
+            </tr>
+            </tbody>
+          </table>
+    </c-card>
+  </c-col>
+<!-- - TABLA - TABLA - TABLA - TABLA - TABLA - TABLA - TABLA - TABLA - -->
+  <!-- <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Angular Table</strong> <small>Basic example</small>
+      </c-card-header>
+      <table [striped]="true" [hover]="true" [small]="true" cTable style="font-size: 10.5px;">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Activo</th>
+            <th scope="col">CUIL</th>
+            <th scope="col">CUIL Titular</th>
+            <th scope="col">Nro Afiliado</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Gerenciador</th>
+            <th scope="col">Parentesco</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Ultima Alta Formal</th>
+            <th scope="col">Tipo Beneficiario</th>
+            <th scope="col">Situacion Revista</th>
+            <th scope="col">Nacimiento</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Provincia</th>
+            <th scope="col">Localidad</th>
+            <th scope="col">Fec. Ult. Baja Formal</th>
+            <th scope="col">Venc. Certificado Estudios</th>
+            <th scope="col">CUIL Anterior</th>
+            <th scope="col">Venc. PMI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let income of backendIncome">
+            <th scope="row">{{income.id}}</th>
+            <td [ngClass]="{'active-table-true': income.activo, 'active-table-false': !income.activo}">{{income.activo | boolActive }}</td>
+            <td class="cuil-table">{{income.cuil}}</td>
+            <td class="cuil-table">{{income.cuilTitular}}</td>
+            <td>{{income.nroAfiliado}}</td>
+            <td>{{income.nombre}}</td>
+            <td>{{income.gerenciador}}</td>
+            <td>{{income.parentesco}}</td>
+            <td>{{income.categoria}}</td>
+            <td>{{income.ultimaAltaReferenciario | date : "short" }}</td>
+            <td>{{income.tipoReferenciario}}</td>
+            <td>{{income.situacionRevista}}</td>
+            <td>{{income.nacimiento | date : "short" }}</td>
+            <td>{{income.edad}}</td>
+            <td>{{income.provincia}}</td>
+            <td>{{income.localidad}}</td>
+            <td>{{income.fechaUltimaBajaFormal}}</td>
+            <td>{{income.vencimientoCertificadoEstudios}}</td>
+            <td>{{income.cuilAnterior}}</td>
+            <td>{{income.vencimientoPMI}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </c-card>
+  </c-col> -->
+</c-row>
