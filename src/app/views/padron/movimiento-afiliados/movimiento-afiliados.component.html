@@ -1,7 +1,7 @@
 
 <c-container class="px-3 rounded-3" >
   <div class="gap-4 col-12 mb-3">
-    <button cButton color="primary" class="me-2"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR CSV</button>
+    <button cButton color="primary" class="me-2" (click)="exportCSV(backendIncome)"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR CSV</button>
     <button cButton color="primary"><svg cIcon class="me-2" name="cil-arrow-bottom"></svg>EXPORTAR BYMOVI</button>
   </div>
 </c-container>
@@ -13,8 +13,8 @@
           <label cLabel class="visually-hidden" for="ejecutado">
             Type
           </label>
-          <select cFormControl aria-label="ejecutado" cSelect>
-            <option>Open this select menu</option>
+          <select cFormControl aria-label="ejecutado" cSelect #ejecutado>
+            <option>Ejecutados</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -24,8 +24,8 @@
           <label cLabel class="visually-hidden" for="gerenciador">
             Type
           </label>
-          <select cFormControl aria-label="gerenciador" cSelect>
-            <option>Open this select menu2</option>
+          <select cFormControl aria-label="gerenciador" cSelect #gerenciador>
+            <option>Seleccionar Gerenciador</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -35,51 +35,51 @@
           <label cLabel class="visually-hidden" for="inputDate">
             fechEjecutado
           </label>
-          <input cFormControl id="fechEjecutado" placeholder="date" type="date" />
+          <input cFormControl id="fechEjecutado" placeholder="date" type="date" #fechEjecutado />
         </c-col>
         <c-col xs="auto">
           <label cLabel class="visually-hidden" for="inputDate">
             fechFormal
           </label>
-          <input cFormControl id="fechFormal" placeholder="date" type="date" />
+          <input cFormControl id="fechFormal" placeholder="date" type="date" #fechFormal />
         </c-col>
         <c-col xs="auto">
           <label cLabel class="visually-hidden" for="Movimiento">
             Type
           </label>
-          <select cFormControl aria-label="Movimiento" cSelect>
-            <option>Open this select menu</option>
+          <select cFormControl aria-label="movimiento" cSelect #movimiento>
+            <option>Tipo Movimiento</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
         </c-col>
         <c-col xs="auto">
-          <label cLabel class="visually-hidden" for="CUIL">
+          <label cLabel class="visually-hidden" for="cuil">
             CUIL
           </label>
-          <input cFormControl id="CUIL" type="text" />
+          <input cFormControl id="cuil" type="text" #cuil />
         </c-col>
         <div>
         </div>
         <c-col xs="auto">
-          <label cLabel class="visually-hidden" for="ID">
+          <label cLabel class="visually-hidden" for="id">
             ID
           </label>
-          <input cFormControl id="ID" type="text" />
+          <input cFormControl id="id" type="text" #id />
         </c-col>
         <c-col xs="auto">
           <label cLabel class="visually-hidden" for="inputDate">
             fechFormal
           </label>
-          <input cFormControl id="creado" placeholder="date" type="date" />
+          <input cFormControl id="fechFormal" placeholder="fechFormal" type="date" #fechFormal2 />
         </c-col>
         <c-col xs="auto">
           <label cLabel class="visually-hidden" for="Movimiento">
             Type
           </label>
-          <select cFormControl aria-label="Movimiento" cSelect>
-            <option>Open this select menu</option>
+          <select cFormControl aria-label="Movimiento" cSelect #titular>
+            <option>Titular</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -89,7 +89,19 @@
 
       <c-row class="mt-3" >
         <c-col xs="auto">
-          <button cButton type="submit">
+          <button cButton type="submit"
+          (click)="searchAfiliados(filtroSearch= {
+          ejecutado: ejecutado.value,
+          gerenciador: gerenciador.value,
+          fechEjecutado: fechEjecutado.value,
+          fechNormal: fechFormal.value,
+          tipoMovimiento: movimiento.value,
+          cuil: cuil.value,
+          id: id.value,
+          fechnormal2: fechFormal2.value,
+          titular: titular.value
+          });"
+          >
             BUSCAR AFILIADOS
           </button>
         </c-col>
