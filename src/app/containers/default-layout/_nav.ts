@@ -36,7 +36,7 @@ export const navItems: INavData[] = [
     children: [
       {
         name: 'Afiliados Empadronados',
-        url: '/base/tabletest'
+        url: '/padron/afiliadosempadronados'
       },
       {
         name: 'Movimientos de Afiliados',

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
 import { DocumentacionRespaldatoriaComponent } from './documentacion-respaldatoria/documentacion-respaldatoria.component';
+import { AfiliadosEmpadronadosComponent } from './afiliados-empadronados/afiliados-empadronados.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,13 @@ const routes: Routes = [
           title: 'Documentacion Respaldatoria',
         },
       },
+      {
+        path: 'afiliadosempadronados',
+        component: AfiliadosEmpadronadosComponent,
+        data: {
+          title: 'Afiliados Empadronados',
+        },
+      }
     ],
   },
 ];

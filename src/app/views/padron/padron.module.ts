@@ -35,12 +35,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IconModule } from '@coreui/icons-angular';
 import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
 import { DocumentacionRespaldatoriaComponent } from './documentacion-respaldatoria/documentacion-respaldatoria.component';
+import { AfiliadosEmpadronadosComponent } from './afiliados-empadronados/afiliados-empadronados.component';
 
 @NgModule({
   declarations: [
     MovimientoAfiliadosComponent,
     CambiosGerenciadorComponent,
-    DocumentacionRespaldatoriaComponent
+    DocumentacionRespaldatoriaComponent,
+    AfiliadosEmpadronadosComponent
   ],
   imports: [
     PadronRoutingModule,
