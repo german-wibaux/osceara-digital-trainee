@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
 import { DocumentacionRespaldatoriaComponent } from './documentacion-respaldatoria/documentacion-respaldatoria.component';
 import { AfiliadosEmpadronadosComponent } from './afiliados-empadronados/afiliados-empadronados.component';
+import { AltaAfiliadosComponent } from './alta-afiliados/alta-afiliados.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,13 @@ const routes: Routes = [
         component: AfiliadosEmpadronadosComponent,
         data: {
           title: 'Afiliados Empadronados',
+        },
+      },
+      {
+        path: 'altaafiliados',
+        component: AltaAfiliadosComponent,
+        data: {
+          title: 'Alta de Afiliados',
         },
       }
     ],

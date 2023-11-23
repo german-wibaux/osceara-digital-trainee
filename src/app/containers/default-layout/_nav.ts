@@ -53,6 +53,10 @@ export const navItems: INavData[] = [
       {
         name: 'Documentación Respaldatoria',
         url: '/padron/documentacionrespaldatoria'
+      },
+      {
+        name: 'Alta De Afiliados',
+        url: '/padron/altaafiliados'
       }
     ]
   },

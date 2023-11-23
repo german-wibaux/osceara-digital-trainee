@@ -36,13 +36,15 @@ import { IconModule } from '@coreui/icons-angular';
 import { CambiosGerenciadorComponent } from './cambios-gerenciador/cambios-gerenciador.component';
 import { DocumentacionRespaldatoriaComponent } from './documentacion-respaldatoria/documentacion-respaldatoria.component';
 import { AfiliadosEmpadronadosComponent } from './afiliados-empadronados/afiliados-empadronados.component';
+import { AltaAfiliadosComponent } from './alta-afiliados/alta-afiliados.component';
 
 @NgModule({
   declarations: [
     MovimientoAfiliadosComponent,
     CambiosGerenciadorComponent,
     DocumentacionRespaldatoriaComponent,
-    AfiliadosEmpadronadosComponent
+    AfiliadosEmpadronadosComponent,
+    AltaAfiliadosComponent
   ],
   imports: [
     PadronRoutingModule,

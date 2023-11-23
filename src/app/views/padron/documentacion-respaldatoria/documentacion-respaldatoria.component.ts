@@ -7,6 +7,7 @@ interface BackendIncome {
   afiliadoText: string;
   gerenciador: string;
   descripcion: string;
+  usuario: string;
 }
 
 @Component({
@@ -23,6 +24,7 @@ export class DocumentacionRespaldatoriaComponent {
     afiliadoText: "BELLA ADOLFINA",
     gerenciador: "B15 - Boreal",
     descripcion: "DOCUMENTACION BAJA HIJA",
+    usuario: "German",
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ export class DocumentacionRespaldatoriaComponent {
     afiliadoText: "BELLA ADOLFINA",
     gerenciador: "B15 - Boreal",
     descripcion: "REINGRESO A OSCEARA (SSS)",
+    usuario: "German",
   },
   {
     id: 3,
@@ -39,6 +42,7 @@ export class DocumentacionRespaldatoriaComponent {
     afiliadoText: "BELLA ADOLFINA",
     gerenciador: "B15 - Boreal",
     descripcion: "NOTA DE BAJA CONCUBINA",
+    usuario: "German",
   },
   {
     id: 4,
@@ -47,6 +51,7 @@ export class DocumentacionRespaldatoriaComponent {
     afiliadoText: "BELLA ADOLFINA",
     gerenciador: "B15 - Boreal",
     descripcion: "ANULACION DE OPCION SSS",
+    usuario: "German",
   },]
 
   exportCSV(){

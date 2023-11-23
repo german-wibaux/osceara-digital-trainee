@@ -65,15 +65,17 @@
               <td>Afiliado</td>
               <td>Gerenciador</td>
               <td>Descripcion</td>
+              <td>Usuario</td>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let income of backendIncome">
               <th scope="row">{{income.id}}</th>
               <td>{{income.creado | date : 'short'}}</td>
-              <td><span class="cuil-table">{{income.afiliadoCUIL}}bue</span> {{income.afiliadoText}}</td>
+              <td><span class="cuil-table">{{income.afiliadoCUIL}}</span> {{income.afiliadoText}}</td>
               <td>{{income.gerenciador}}</td>
               <td>{{income.descripcion}}</td>
+              <td>{{income.usuario}}</td>
             </tr>
             </tbody>
           </table>
