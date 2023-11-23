@@ -5,30 +5,30 @@
             <div [visible]="collapses[0]" cCollapse>
               <c-card class="shadow mt-3">
                 <c-card-body>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="calleText">Calle</span>
-                    <input cFormControl id="calle" type="text" #calle />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="numero_puertaText">Numero de Puerta</span>
-                    <input cFormControl id="numero_puerta" type="text" #numero_puerta />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="pisoText">Piso</span>
-                    <input cFormControl id="piso" type="text" #piso />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="departamentoText">Departamento</span>
-                    <input cFormControl id="departamento" type="text" #departamento />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="localidadText">Localidad</span>
-                    <input cFormControl id="localidad" type="text" #localidad />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="codigo_postalText">Codigo postal</span>
-                    <input cFormControl id="codigo_postal" type="number" #codigo_postal />
-                  </c-input-group>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="calle" type="text" placeholder="Calle" #calle />
+                    <label cLabel for="floatingInput">Calle</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="numero_puerta" type="text" placeholder="" #numero_puerta />
+                    <label cLabel id="floatingInput">Numero de Puerta</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="piso" type="text" placeholder="" #piso />
+                    <label cLabel id="pisoText">Piso</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="departamento" type="text" placeholder="" #departamento />
+                    <label cLabel id="departamentoText">Departamento</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="localidad" type="text" placeholder="" #localidad />
+                    <label cLabel id="localidadText">Localidad</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="codigo_postal" type="number" placeholder="" #codigo_postal />
+                    <label cLabel id="codigo_postalText">Codigo postal</label>
+                  </div>
                 </c-card-body>
               </c-card>
             </div>
@@ -36,38 +36,38 @@
             <div [visible]="collapses[1]" cCollapse>
               <c-card class="shadow mt-3">
                 <c-card-body>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="coding_obra_socialText">Coding Obra Social</span>
-                    <input cFormControl id="coding_obra_social" type="text" #coding_obra_social />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="cuit_empleadorText">CUIT de Empleador</span>
-                    <input cFormControl id="cuit_empleador" type="text" #cuit_empleador />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="cuil_titularText">CUIL de Titular</span>
-                    <input cFormControl id="cuil_titular" type="text" #cuil_titular />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="cuilText">CUIL</span>
-                    <input cFormControl id="cuil" type="text" #cuil />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="numero_documentoText">Numero de Documento</span>
-                    <input cFormControl id="numero_documento" type="text" #numero_documento />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="apellido_y_nombreText">Apellido y Nombre</span>
-                    <input cFormControl id="apellido_y_nombre" type="text" #apellido_y_nombre />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecha_nacimientoText">Fecha Nacimiento</span>
-                    <input cFormControl id="fecha_nacimiento" type="text" #fecha_nacimiento />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="telefonoText">Telefono</span>
-                    <input cFormControl id="telefono" type="text" #telefono />
-                  </c-input-group>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="coding_obra_social" type="text" placeholder="" #coding_obra_social />
+                    <label cLabel id="coding_obra_socialText">Coding Obra Social</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="cuit_empleador" type="text" placeholder="" #cuit_empleador />
+                    <label cLabel id="cuit_empleadorText">CUIT de Empleador</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="cuil_titular" type="text" placeholder="" #cuil_titular />
+                    <label cLabel id="cuil_titularText">CUIL de Titular</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="cuil" type="text" placeholder="" #cuil />
+                    <label cLabel id="cuilText">CUIL</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="numero_documento" type="text" placeholder="" #numero_documento />
+                    <label cLabel id="numero_documentoText">Numero de Documento</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="apellido_y_nombre" type="text" placeholder="" #apellido_y_nombre />
+                    <label cLabel id="apellido_y_nombreText">Apellido y Nombre</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="fecha_nacimiento" type="text" placeholder="" #fecha_nacimiento />
+                    <label cLabel id="fecha_nacimientoText">Fecha Nacimiento</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="telefono" type="text" placeholder="" #telefono />
+                    <label cLabel id="telefonoText">Telefono</label>
+                  </div>
                 </c-card-body>
               </c-card>
             </div>
@@ -75,42 +75,42 @@
             <div [visible]="collapses[2]" cCollapse>
               <c-card class="shadow mt-3">
                 <c-card-body>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecha_alta_en_obra_socialText">Fecha Alta en Obra Social</span>
-                    <input cFormControl id="fecha_alta_en_obra_social" type="text" #fecha_alta_en_obra_social />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecha_cierre_de_presentacionText">Fecha Cierre de Presentacion</span>
-                    <input cFormControl id="fecha_cierre_de_presentacion" type="text" #fecha_cierre_de_presentacion />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="verificacion_cuilText">Verificacion Cuil</span>
-                    <input cFormControl id="verificacion_cuil" type="text" #verificacion_cuil />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="cuil_informado_por_la_osText">Cuil Informado por la os</span>
-                    <input cFormControl id="cuil_informado_por_la_os" type="text" #cuil_informado_por_la_os />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="cuit_segun_sijpText">CUIT segun SIJP</span>
-                    <input cFormControl id="cuit_segun_sijp" type="text" #cuit_segun_sijp />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="obra_social_segun_sijpText">Obra Social segun SIJP</span>
-                    <input cFormControl id="obra_social_segun_sijp" type="text" #obra_social_segun_sijp />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="ultimo_periodo_informado_ensijpText">Ultimo Periodo Informado ensijp</span>
-                    <input cFormControl id="ultimo_periodo_informado_ensijp" type="text" #ultimo_periodo_informado_ensijp />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="obra_social_opcion_vigenteText">Obra Social Opcion Vigente</span>
-                    <input cFormControl id="obra_social_opcion_vigente" type="text" #obra_social_opcion_vigente />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="periodo_desde_opcionText">Periodo desde Opcion</span>
-                    <input cFormControl id="periodo_desde_opcion" type="text" #periodo_desde_opcion />
-                  </c-input-group>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="fecha_alta_en_obra_social" type="text" placeholder="" #fecha_alta_en_obra_social />
+                    <label cLabel id="fecha_alta_en_obra_socialText">Fecha Alta en Obra Social</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="fecha_cierre_de_presentacion" type="text" placeholder="" #fecha_cierre_de_presentacion />
+                    <label cLabel id="fecha_cierre_de_presentacionText">Fecha Cierre de Presentacion</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="verificacion_cuil" type="text" placeholder="" #verificacion_cuil />
+                    <label cLabel id="verificacion_cuilText">Verificacion Cuil</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="cuil_informado_por_la_os" type="text" placeholder="" #cuil_informado_por_la_os />
+                    <label cLabel id="cuil_informado_por_la_osText">Cuil Informado por la os</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="cuit_segun_sijp" type="text" placeholder="" #cuit_segun_sijp />
+                    <label cLabel id="cuit_segun_sijpText">CUIT segun SIJP</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="obra_social_segun_sijp" type="text" placeholder="" #obra_social_segun_sijp />
+                    <label cLabel id="obra_social_segun_sijpText">Obra Social segun SIJP</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="ultimo_periodo_informado_ensijp" type="text" placeholder="" #ultimo_periodo_informado_ensijp />
+                    <label cLabel id="ultimo_periodo_informado_ensijpText">Ultimo Periodo Informado ensijp</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="obra_social_opcion_vigente" type="text" placeholder="" #obra_social_opcion_vigente />
+                    <label cLabel id="obra_social_opcion_vigenteText">Obra Social Opcion Vigente</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="periodo_desde_opcion" type="text" placeholder="" #periodo_desde_opcion />
+                    <label cLabel id="periodo_desde_opcionText">Periodo desde Opcion</label>
+                  </div>
                 </c-card-body>
               </c-card>
             </div>
@@ -118,18 +118,18 @@
             <div [visible]="collapses[3]" cCollapse>
               <c-card class="shadow mt-3">
                 <c-card-body>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecha_vigencia_certificado_estudioText">Fecha de Vigencia de Certificado de Estudio</span>
-                    <input cFormControl id="fecha_vigencia_certificado_estudio" type="text" #fecha_vigencia_certificado_estudio />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecha_vigencia_certificado_discapacidadText">Fecha de Vigencia de Certificado de Discapacidad</span>
-                    <input cFormControl id="fecha_vigencia_certificado_discapacidad" type="text" #fecha_vigencia_certificado_discapacidad />
-                  </c-input-group>
-                  <c-input-group class="mb-3">
-                    <span cInputGroupText id="activoText">Activo</span>
-                    <input cFormControl id="activo" type="text" #activo />
-                  </c-input-group>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="fecha_vigencia_certificado_estudio" type="text" placeholder="" #fecha_vigencia_certificado_estudio />
+                    <label cLabel id="fecha_vigencia_certificado_estudioText">Fecha de Vigencia de Certificado de Estudio</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="fecha_vigencia_certificado_discapacidad" type="text" placeholder="" #fecha_vigencia_certificado_discapacidad />
+                    <label cLabel id="fecha_vigencia_certificado_discapacidadText">Fecha de Vigencia de Certificado de Discapacidad</label>
+                  </div>
+                  <div [cFormFloating]="true" class="mb-3">
+                    <input cFormControl id="activo" type="text" placeholder="" #activo />
+                    <label cLabel id="activoText">Activo</label>
+                  </div>
                 </c-card-body>
               </c-card>
             </div>
