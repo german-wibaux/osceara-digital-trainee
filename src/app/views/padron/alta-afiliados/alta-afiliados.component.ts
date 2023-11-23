@@ -27,17 +27,9 @@ interface formFiltro{
 	obra_social_opcion_vigente             : string | null;
 	periodo_desde_opcion                   : string | null;
 
-	fecha_movimiento                       : string | null;
-	detalle_ultimo_movimiento              : string | null;
-	fecha_vigencia_certificado_estudio     : string | null;
-	fecha_vigencia_certificado_discapacidad: string | null;
+	fecha_vigencia_certificado_estudio     : Date   | string | null;
+	fecha_vigencia_certificado_discapacidad: Date   | string | null;
 	activo                                 : string | null;
-	created_at                             : string | null;
-	updated_at                             : string | null;
-	id_usuario_alta                        : string | null;
-	id_usuario_actualizacion               : string | null;
-	plataforma_origen                      : string | null;
-	direccion_ip                           : string | null;
 }
 
 interface BackendIncome {
@@ -91,17 +83,9 @@ export class AltaAfiliadosComponent {
     obra_social_opcion_vigente             : "",
     periodo_desde_opcion                   : "",
 
-    fecha_movimiento                       : "",
-    detalle_ultimo_movimiento              : "",
     fecha_vigencia_certificado_estudio     : "",
     fecha_vigencia_certificado_discapacidad: "",
     activo                                 : "",
-    created_at                             : "",
-    updated_at                             : "",
-    id_usuario_alta                        : "",
-    id_usuario_actualizacion               : "",
-    plataforma_origen                      : "",
-    direccion_ip                           : "",
   };
 
   toggleCollapse(id: number): void {
