@@ -68,3 +68,45 @@
 
     </c-container>
 <c-row ngPreserveWhitespaces>
+
+  <c-row ngPreserveWhitespaces>
+
+    <c-col xs="12">
+        <c-card class="mb-4">
+
+            <table [striped]="true" [hover]="true" [small]="true" cTable style="font-size: 10.5px;">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Activo</th>
+                        <th scope="col">CUIL</th>
+                        <th scope="col">CUIL Titular</th>
+                        <th scope="col">Nro Afiliado</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Gerenciador</th>
+                        <th scope="col">Nacimiento</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Provincia</th>
+                        <th scope="col">Localidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let income of backendIncome">
+                        <th scope="row">{{income.id}}</th>
+                        <td class="active-table-true" *ngIf="income.activo">&#10003;</td>
+                        <td class="active-table-false" *ngIf="!income.activo">X</td>
+                        <td class="cuil-table">{{income.cuil}}</td>
+                        <td class="cuil-table">{{income.cuilTitular}}</td>
+                        <td>{{income.nroAfiliado}}</td>
+                        <td>{{income.nombre}}</td>
+                        <td>{{income.gerenciador}}</td>
+                        <td>{{income.nacimiento | date : "short" }}</td>
+                        <td>{{income.edad}}</td>
+                        <td>{{income.provincia}}</td>
+                        <td>{{income.localidad}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </c-card>
+    </c-col>
+</c-row>
