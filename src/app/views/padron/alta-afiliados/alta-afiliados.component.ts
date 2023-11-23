@@ -1,9 +1,43 @@
 import { Component } from '@angular/core';
 
 interface formFiltro{
-  fecCreado: Date | string | null;
-  cuilTitular: number | string | null;
-  ejecutado: string | null;
+  calle                                  : string | null;
+	numero_puerta                          : string | null;
+	piso                                   : string | null;
+	departamento                           : string | null;
+	localidad                              : string | null;
+	codigo_postal                          : number | string | null;
+
+	coding_obra_social                     : string | null;
+	cuit_empleador                         : number | string | null;
+	cuil_titular                           : number | string | null;
+	cuil                                   : number | string | null;
+	numero_documento                       : number | string | null;
+	apellido_y_nombre                      : string | null;
+	fecha_nacimiento                       : Date   | string | null;
+	telefono                               : number | string | null;
+
+	fecha_alta_en_obra_social              : Date   | string | null;
+	fecha_cierre_de_presentacion           : Date   | string | null;
+	verificacion_cuil                      : string | null;
+	cuil_informado_por_la_os               : number | string | null;
+	cuit_segun_sijp                        : number | string | null;
+	obra_social_segun_sijp                 : string | null;
+	ultimo_periodo_informado_ensijp        : string | null;
+	obra_social_opcion_vigente             : string | null;
+	periodo_desde_opcion                   : string | null;
+
+	fecha_movimiento                       : string | null;
+	detalle_ultimo_movimiento              : string | null;
+	fecha_vigencia_certificado_estudio     : string | null;
+	fecha_vigencia_certificado_discapacidad: string | null;
+	activo                                 : string | null;
+	created_at                             : string | null;
+	updated_at                             : string | null;
+	id_usuario_alta                        : string | null;
+	id_usuario_actualizacion               : string | null;
+	plataforma_origen                      : string | null;
+	direccion_ip                           : string | null;
 }
 
 @Component({
@@ -17,9 +51,43 @@ export class AltaAfiliadosComponent {
   collapses = [false, false, false, false];
 
   filtroSearch : formFiltro = {
-    fecCreado: "",
-    cuilTitular: "",
-    ejecutado: "",
+    calle                                  : "",
+    numero_puerta                          : "",
+    piso                                   : "",
+    departamento                           : "",
+    localidad                              : "",
+    codigo_postal                          : "",
+
+    coding_obra_social                     : "",
+    cuit_empleador                         : "",
+    cuil_titular                           : "",
+    cuil                                   : "",
+    numero_documento                       : "",
+    apellido_y_nombre                      : "",
+    fecha_nacimiento                       : "",
+    telefono                               : "",
+
+    fecha_alta_en_obra_social              : "",
+    fecha_cierre_de_presentacion           : "",
+    verificacion_cuil                      : "",
+    cuil_informado_por_la_os               : "",
+    cuit_segun_sijp                        : "",
+    obra_social_segun_sijp                 : "",
+    ultimo_periodo_informado_ensijp        : "",
+    obra_social_opcion_vigente             : "",
+    periodo_desde_opcion                   : "",
+
+    fecha_movimiento                       : "",
+    detalle_ultimo_movimiento              : "",
+    fecha_vigencia_certificado_estudio     : "",
+    fecha_vigencia_certificado_discapacidad: "",
+    activo                                 : "",
+    created_at                             : "",
+    updated_at                             : "",
+    id_usuario_alta                        : "",
+    id_usuario_actualizacion               : "",
+    plataforma_origen                      : "",
+    direccion_ip                           : "",
   };
 
   toggleCollapse(id: number): void {
@@ -27,7 +95,7 @@ export class AltaAfiliadosComponent {
     this.collapses[id] = !this.collapses[id];
   }
 
-  searchAfiliados(filtroIncome: formFiltro){
+  searchAfiliados(filtroIncome: formFiltro | any){
     console.log("Se ha enviado correctamente");
     console.log(filtroIncome);
   }

@@ -1,52 +1,166 @@
 <c-container class="px-2 py-3 filter-container rounded-3" >
       <form [gutter]="3" cForm cRow autocomplete="off">
         <c-card>
-            <a (click)="toggleCollapse(0)" cButton class="me-1 my-1" color="primary">Expand</a>
+            <a (click)="toggleCollapse(0)" cButton class="me-1 my-1" color="primary">Domicilio</a>
             <div [visible]="collapses[0]" cCollapse>
               <c-card class="shadow mt-3">
                 <c-card-body>
                   <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecCreadoText">Fecha Creado</span>
-                    <input cFormControl id="fecCreado" placeholder="date" type="date" #fecCreado/>
+                    <span cInputGroupText id="calleText">Calle</span>
+                    <input cFormControl id="calle" type="text" #calle />
                   </c-input-group>
                   <c-input-group class="mb-3">
-                    <span cInputGroupText id="CUILtitularText">CUIL titular</span>
-                    <input cFormControl id="CUILtitular" type="text" #CUILtitular />
+                    <span cInputGroupText id="numero_puertaText">Numero de Puerta</span>
+                    <input cFormControl id="numero_puerta" type="text" #numero_puerta />
                   </c-input-group>
-
                   <c-input-group class="mb-3">
-                    <span cInputGroupText id="ejecutadoText">Ejecutado</span>
-                    <select cFormControl aria-label="ejecutado" cSelect #ejecutado>
-                      <option>Gerenciador</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
+                    <span cInputGroupText id="pisoText">Piso</span>
+                    <input cFormControl id="piso" type="text" #piso />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="departamentoText">Departamento</span>
+                    <input cFormControl id="departamento" type="text" #departamento />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="localidadText">Localidad</span>
+                    <input cFormControl id="localidad" type="text" #localidad />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="codigo_postalText">Codigo postal</span>
+                    <input cFormControl id="codigo_postal" type="number" #codigo_postal />
                   </c-input-group>
                 </c-card-body>
               </c-card>
             </div>
-            <a (click)="toggleCollapse(1)" cButton class="me-1 my-1" color="primary">Expand</a>
+            <a (click)="toggleCollapse(1)" cButton class="me-1 my-1" color="primary">Datos Personales</a>
             <div [visible]="collapses[1]" cCollapse>
               <c-card class="shadow mt-3">
                 <c-card-body>
                   <c-input-group class="mb-3">
-                    <span cInputGroupText id="fecCreadoText">Fecha Creado</span>
-                    <input cFormControl id="fecCreado" placeholder="date" type="date" #fecCreado/>
+                    <span cInputGroupText id="coding_obra_socialText">Coding Obra Social</span>
+                    <input cFormControl id="coding_obra_social" type="text" #coding_obra_social />
                   </c-input-group>
                   <c-input-group class="mb-3">
-                    <span cInputGroupText id="CUILtitularText">CUIL titular</span>
-                    <input cFormControl id="CUILtitular" type="text" #CUILtitular />
+                    <span cInputGroupText id="cuit_empleadorText">CUIT de Empleador</span>
+                    <input cFormControl id="cuit_empleador" type="text" #cuit_empleador />
                   </c-input-group>
-
                   <c-input-group class="mb-3">
-                    <span cInputGroupText id="ejecutadoText">Ejecutado</span>
-                    <select cFormControl aria-label="ejecutado" cSelect #ejecutado>
-                      <option>Gerenciador</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
+                    <span cInputGroupText id="cuil_titularText">CUIL de Titular</span>
+                    <input cFormControl id="cuil_titular" type="text" #cuil_titular />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="cuilText">CUIL</span>
+                    <input cFormControl id="cuil" type="text" #cuil />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="numero_documentoText">Numero de Documento</span>
+                    <input cFormControl id="numero_documento" type="text" #numero_documento />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="apellido_y_nombreText">Apellido y Nombre</span>
+                    <input cFormControl id="apellido_y_nombre" type="text" #apellido_y_nombre />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="fecha_nacimientoText">Fecha Nacimiento</span>
+                    <input cFormControl id="fecha_nacimiento" type="text" #fecha_nacimiento />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="telefonoText">Telefono</span>
+                    <input cFormControl id="telefono" type="text" #telefono />
+                  </c-input-group>
+                </c-card-body>
+              </c-card>
+            </div>
+            <a (click)="toggleCollapse(2)" cButton class="me-1 my-1" color="primary">Datos de Obra Social</a>
+            <div [visible]="collapses[2]" cCollapse>
+              <c-card class="shadow mt-3">
+                <c-card-body>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="fecha_alta_en_obra_socialText">Fecha Alta en Obra Social</span>
+                    <input cFormControl id="fecha_alta_en_obra_social" type="text" #fecha_alta_en_obra_social />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="fecha_cierre_de_presentacionText">Fecha Cierre de Presentacion</span>
+                    <input cFormControl id="fecha_cierre_de_presentacion" type="text" #fecha_cierre_de_presentacion />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="verificacion_cuilText">Verificacion Cuil</span>
+                    <input cFormControl id="verificacion_cuil" type="text" #verificacion_cuil />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="cuil_informado_por_la_osText">Cuil Informado por la os</span>
+                    <input cFormControl id="cuil_informado_por_la_os" type="text" #cuil_informado_por_la_os />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="cuit_segun_sijpText">CUIT segun SIJP</span>
+                    <input cFormControl id="cuit_segun_sijp" type="text" #cuit_segun_sijp />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="obra_social_segun_sijpText">Obra Social segun SIJP</span>
+                    <input cFormControl id="obra_social_segun_sijp" type="text" #obra_social_segun_sijp />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="ultimo_periodo_informado_ensijpText">Ultimo Periodo Informado ensijp</span>
+                    <input cFormControl id="ultimo_periodo_informado_ensijp" type="text" #ultimo_periodo_informado_ensijp />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="obra_social_opcion_vigenteText">Obra Social Opcion Vigente</span>
+                    <input cFormControl id="obra_social_opcion_vigente" type="text" #obra_social_opcion_vigente />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="periodo_desde_opcionText">Periodo desde Opcion</span>
+                    <input cFormControl id="periodo_desde_opcion" type="text" #periodo_desde_opcion />
+                  </c-input-group>
+                </c-card-body>
+              </c-card>
+            </div>
+            <a (click)="toggleCollapse(3)" cButton class="me-1 my-1" color="primary">Datos de Alta</a>
+            <div [visible]="collapses[3]" cCollapse>
+              <c-card class="shadow mt-3">
+                <c-card-body>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="fecha_movimientoText">Fecha de Movimiento</span>
+                    <input cFormControl id="fecha_movimiento" type="text" #fecha_movimiento />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="detalle_ultimo_movimientoText">Detalle Ultimo Movimiento</span>
+                    <input cFormControl id="detalle_ultimo_movimiento" type="text" #detalle_ultimo_movimiento />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="fecha_vigencia_certificado_estudioText">Fecha de Vigencia de Certificado de Estudio</span>
+                    <input cFormControl id="fecha_vigencia_certificado_estudio" type="text" #fecha_vigencia_certificado_estudio />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="fecha_vigencia_certificado_discapacidadText">Decha de Vigencia de Certificado de Discapacidad</span>
+                    <input cFormControl id="fecha_vigencia_certificado_discapacidad" type="text" #fecha_vigencia_certificado_discapacidad />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="activoText">Activo</span>
+                    <input cFormControl id="activo" type="text" #activo />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="created_atText">Fecha de Creacion</span>
+                    <input cFormControl id="created_at" type="text" #created_at />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="updated_atText">Fecha de Actualizacion</span>
+                    <input cFormControl id="updated_at" type="text" #updated_at />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="id_usuario_altaText">ID de Usuario de Alta</span>
+                    <input cFormControl id="id_usuario_alta" type="text" #id_usuario_alta />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="id_usuario_actualizacionText">ID de Usuario de Actualizacion</span>
+                    <input cFormControl id="id_usuario_actualizacion" type="text" #id_usuario_actualizacion />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="plataforma_origenText">Plataforma Origen</span>
+                    <input cFormControl id="plataforma_origen" type="text" #plataforma_origen />
+                  </c-input-group>
+                  <c-input-group class="mb-3">
+                    <span cInputGroupText id="direccion_ipText">Direccion de IP</span>
+                    <input cFormControl id="direccion_ip" type="text" #direccion_ip />
                   </c-input-group>
                 </c-card-body>
               </c-card>
@@ -55,10 +169,45 @@
 
         <c-row class="mt-3" >
           <c-col xs="auto">
-            <button cButton (click)="searchAfiliados(filtroSearch= {
-              fecCreado: fecCreado.value,
-              cuilTitular: CUILtitular.value,
-              ejecutado: ejecutado.value,
+            <button cButton (click)="searchAfiliados(
+              filtroSearch = {
+              calle: calle.value,
+              numero_puerta: numero_puerta.value,
+              piso: piso.value,
+              departamento: departamento.value,
+              localidad: localidad.value,
+              codigo_postal: codigo_postal.value,
+
+              coding_obra_social: coding_obra_social.value,
+              cuit_empleador: cuit_empleador.value,
+              cuil_titular: cuil_titular.value,
+              cuil: cuil.value,
+              numero_documento: numero_documento.value,
+              apellido_y_nombre: apellido_y_nombre.value,
+              fecha_nacimiento: fecha_nacimiento.value,
+              telefono: telefono.value,
+
+              fecha_alta_en_obra_social: fecha_alta_en_obra_social.value,
+              fecha_cierre_de_presentacion: fecha_cierre_de_presentacion.value,
+              verificacion_cuil: verificacion_cuil.value,
+              cuil_informado_por_la_os: cuil_informado_por_la_os.value,
+              cuit_segun_sijp: cuit_segun_sijp.value,
+              obra_social_segun_sijp: obra_social_segun_sijp.value,
+              ultimo_periodo_informado_ensijp: ultimo_periodo_informado_ensijp.value,
+              obra_social_opcion_vigente: obra_social_opcion_vigente.value,
+              periodo_desde_opcion: periodo_desde_opcion.value,
+
+              fecha_movimiento: fecha_movimiento.value,
+              detalle_ultimo_movimiento: detalle_ultimo_movimiento.value,
+              fecha_vigencia_certificado_estudio: fecha_vigencia_certificado_estudio.value,
+              fecha_vigencia_certificado_discapacidad: fecha_vigencia_certificado_discapacidad.value,
+              activo: activo.value,
+              created_at: created_at.value,
+              updated_at: updated_at.value,
+              id_usuario_alta: id_usuario_alta.value,
+              id_usuario_actualizacion: id_usuario_actualizacion.value,
+              plataforma_origen: plataforma_origen.value,
+              direccion_ip: direccion_ip.value,
               });">
               Crear afiliado
             </button>
